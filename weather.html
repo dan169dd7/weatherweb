@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>天气Api學習使用網站</title>
+    <link href="css/lib/bootstrap.min.css" rel="stylesheet">
+	<link href="css/styles.css" rel="stylesheet">
+	<link href="css/styles_tablet.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6">	 
+              <div class="weather">
+                  <div class="weatherNow"></div>
+                  <div class="weatherWeek"></div>
+              </div>
+          </div>
+          <div class="col-md-6">
+              <h3 id="CName"></h3>
+              選擇城市<select id="CityList">
+                  <option value="0" selected>基隆</option>
+                  <option value="1">新北</option>
+                  <option value="2">臺北</option>
+                  <option value="3">桃園</option>
+                  <option value="4">新竹縣</option>
+                  <option value="5">新竹</option>
+                  <option value="6">苗栗</option>
+                  <option value="7">臺中</option>
+                  <option value="8">南投</option>
+                  <option value="9">彰化</option>
+                  <option value="10">雲林</option>
+                  <option value="11">嘉義縣</option>
+                  <option value="12">嘉義</option>
+                  <option value="13">臺南</option>
+                  <option value="14">高雄</option>
+                  <option value="15">屏東</option>
+                  <option value="16">臺東</option>
+                  <option value="17">花蓮</option>
+                  <option value="18">宜蘭</option>
+              </select>
+          </div>
+        </div>
+        <h3 id="test"></h3>
+      </div>
+</body>
+<body>
+    <script type="text/javascript" src="lib/jquery-3.1.1-min.js"></script>
+    <script type="text/javascript" src="cityData.js"></script>
+    <script type="text/javascript" src="WeatherScript.js"></script>
+</body>
+</html>

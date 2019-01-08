@@ -1,0 +1,309 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>World Weather</title>
+<!-- For-Mobile-Apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Multiple Weather Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+
+<!-- //For-Mobile-Apps -->
+<!-- Style -->
+<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+<!-- Style -->
+<!-- JavaScript -->
+
+<!-- Javascript -->
+</head>
+ <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+ <script>
+ 
+ 
+   function makeRequestHK() {
+ 
+   
+      xhr = new XMLHttpRequest();
+      xhr.onload= function() {
+        // 這邊處理傳回來的東西
+		var response = JSON.parse(this.responseText);
+        var city = response.city.name + ", " +response.city.country;
+        var weatherTitle = response.list[0].weather[0].main;
+        var temp = response.list[0].main.temp + "°";
+        
+        var weatherContainer = document.querySelector('#hk')
+       
+	   
+		weatherContainer.innerHTML+=("<div class ='info' id='hkb' style=background-image:'image.sunny.png'> <div class='temp'>" +temp+" </div> <div class='term'> "+weatherTitle+" </div> <div class='clear'> </div> </div>")
+		var weatherpic = document.getElementById("hkb");
+		
+		weatherpic.onclick = function(){
+		window.location.href="https://openweathermap.org/city/1819729"
+		}
+		
+		if(weatherTitle=='Rain'){
+		weatherpic.style.backgroundImage = "url('image/raining.png')";
+        }
+		else if(weatherTitle=='Clear'){
+		weatherpic.style.backgroundImage = "url('image/clear.png')";
+        }
+		else if(weatherTitle=='Clouds'){
+		weatherpic.style.backgroundImage = "url('image/cloudy.png')";
+        }
+		else{
+		weatherpic.style.backgroundImage = "url('image/moon.png')";
+		}
+		
+		}
+      xhr.open('GET','https://api.openweathermap.org/data/2.5/forecast?id=1819729&APPID=d8d4c1a7797ac7b7982808bc8624119d&units=metric', true )  
+      xhr.send()
+      }
+	  
+	  function makeRequestLD() {
+      xhr = new XMLHttpRequest();
+      xhr.onload= function() {
+       
+		var response = JSON.parse(this.responseText);
+        var city = response.city.name + ", " +response.city.country;
+        var weatherTitle = response.list[0].weather[0].main;
+        var temp = response.list[0].main.temp + "°";
+        
+        var weatherContainer = document.querySelector('#ld')
+      
+		weatherContainer.innerHTML+=("<div class ='info' id='ldb' style=background-image:'image.sunny.png'> <div class='temp'>" +temp+" </div> <div class='term'> "+weatherTitle+" </div> <div class='clear'> </div> </div>")
+		var weatherpic = document.getElementById("ldb");
+		weatherpic.onclick = function(){
+		window.location.href="https://openweathermap.org/city/2643743"
+		}
+		if(weatherTitle=='Rain'){
+		weatherpic.style.backgroundImage = "url('image/raining.png')";
+        }
+		else if(weatherTitle=='Clear'){
+		weatherpic.style.backgroundImage = "url('image/clear.png')";
+        }
+		else if(weatherTitle=='Clouds'){
+		weatherpic.style.backgroundImage = "url('image/cloudy.png')";
+        }
+		else{
+		weatherpic.style.backgroundImage = "url('image/moon.png')";
+		}
+		
+		}
+     
+      xhr.open('GET','https://api.openweathermap.org/data/2.5/forecast?id=2643743&APPID=d8d4c1a7797ac7b7982808bc8624119d&units=metric', true )  
+      xhr.send()
+      }
+	  
+	  function makeRequestNY() {
+      xhr = new XMLHttpRequest();
+      xhr.onload= function() {
+       
+		var response = JSON.parse(this.responseText);
+        var city = response.city.name + ", " +response.city.country;
+        var weatherTitle = response.list[0].weather[0].main;
+        var temp = response.list[0].main.temp + "°";
+        
+        var weatherContainer = document.querySelector('#ny')
+      
+		weatherContainer.innerHTML+=("<div class ='info' id='nyb' style=background-image:'image.sunny.png'> <div class='temp'>" +temp+" </div> <div class='term'> "+weatherTitle+" </div> <div class='clear'> </div> </div>")
+		var weatherpic = document.getElementById("nyb");
+		weatherpic.onclick = function(){
+		window.location.href="https://openweathermap.org/city/5128581"
+		}
+		if(weatherTitle=='Rain'){
+		weatherpic.style.backgroundImage = "url('image/raining.png')";
+        }
+		else if(weatherTitle=='Clear'){
+		weatherpic.style.backgroundImage = "url('image/clear.png')";
+        }
+		else if(weatherTitle=='Clouds'){
+		weatherpic.style.backgroundImage = "url('image/cloudy.png')";
+        }
+		else{
+		weatherpic.style.backgroundImage = "url('image/moon.png')";
+		}
+		
+		
+		}
+     
+      xhr.open('GET','https://api.openweathermap.org/data/2.5/forecast?id=5128581&APPID=d8d4c1a7797ac7b7982808bc8624119d&units=metric', true )  
+      xhr.send()
+      }
+	  
+	  function makeRequestSY() {
+      xhr = new XMLHttpRequest();
+      xhr.onload= function() {
+       
+		var response = JSON.parse(this.responseText);
+        var city = response.city.name + ", " +response.city.country;
+        var weatherTitle = response.list[0].weather[0].main;
+        var temp = response.list[0].main.temp + "°";
+        
+        var weatherContainer = document.querySelector('#sy')
+      
+		weatherContainer.innerHTML+=("<div class ='info' id='syb' style=background-image:'image.sunny.png'> <div class='temp'>" +temp+" </div> <div class='term'> "+weatherTitle+" </div> <div class='clear'> </div> </div>")
+		var weatherpic = document.getElementById("syb");
+		weatherpic.onclick = function(){
+		window.location.href="https://openweathermap.org/city/2147714"
+		}
+		if(weatherTitle=='Rain'){
+		weatherpic.style.backgroundImage = "url('image/raining.png')";
+        }
+		else if(weatherTitle=='Clear'){
+		weatherpic.style.backgroundImage = "url('image/clear.png')";
+        }
+		else if(weatherTitle=='Clouds'){
+		weatherpic.style.backgroundImage = "url('image/cloudy.png')";
+        }
+		else{
+		weatherpic.style.backgroundImage = "url('image/moon.png')";
+		}
+		
+		
+		}
+     
+      xhr.open('GET','https://api.openweathermap.org/data/2.5/forecast?id=2147714&APPID=d8d4c1a7797ac7b7982808bc8624119d&units=metric', true )  
+      xhr.send()
+      }
+	  
+	   function makeRequestCT() {
+      xhr = new XMLHttpRequest();
+      xhr.onload= function() {
+       
+		var response = JSON.parse(this.responseText);
+        var city = response.city.name + ", " +response.city.country;
+        var weatherTitle = response.list[0].weather[0].main;
+        var temp = response.list[0].main.temp + "°";
+        
+        var weatherContainer = document.querySelector('#ct')
+      
+		weatherContainer.innerHTML+=("<div class ='info' id='ctb' style=background-image:'image.sunny.png'> <div class='temp'>" +temp+" </div> <div class='term'> "+weatherTitle+" </div> <div class='clear'> </div> </div>")
+		var weatherpic = document.getElementById("ctb");
+		weatherpic.onclick = function(){
+		window.location.href="https://openweathermap.org/city/3369157"
+		}
+		if(weatherTitle=='Rain'){
+		weatherpic.style.backgroundImage = "url('image/raining.png')";
+        }
+		else if(weatherTitle=='Clear'){
+		weatherpic.style.backgroundImage = "url('image/clear.png')";
+        }
+		else if(weatherTitle=='Clouds'){
+		weatherpic.style.backgroundImage = "url('image/cloudy.png')";
+        }
+		else{
+		weatherpic.style.backgroundImage = "url('image/moon.png')";
+		}
+		
+		}
+     
+      xhr.open('GET','https://api.openweathermap.org/data/2.5/forecast?id=3369157&APPID=d8d4c1a7797ac7b7982808bc8624119d&units=metric', true )  
+      xhr.send()
+      }
+	  
+	  function makeRequestRI() {
+      xhr = new XMLHttpRequest();
+      xhr.onload= function() {
+       
+		var response = JSON.parse(this.responseText);
+        var city = response.city.name + ", " +response.city.country;
+        var weatherTitle = response.list[0].weather[0].main;
+        var temp = response.list[0].main.temp + "°";
+        
+        var weatherContainer = document.querySelector('#ri')
+      
+		weatherContainer.innerHTML+=("<div class ='info' id='rib' style=background-image:'image.sunny.png'> <div class='temp'>" +temp+" </div> <div class='term'> "+weatherTitle+" </div> <div class='clear'> </div> </div>")
+		var weatherpic = document.getElementById("rib");
+		weatherpic.onclick = function(){
+		window.location.href="https://openweathermap.org/city/3451190"
+		}
+		if(weatherTitle=='Rain'){
+		weatherpic.style.backgroundImage = "url('image/raining.png')";
+        }
+		else if(weatherTitle=='Clear'){
+		weatherpic.style.backgroundImage = "url('image/clear.png')";
+        }
+		else if(weatherTitle=='Clouds'){
+		weatherpic.style.backgroundImage = "url('image/cloudy.png')";
+        }
+		else{
+		weatherpic.style.backgroundImage = "url('image/moon.png')";
+		}
+		
+		}
+     
+      xhr.open('GET','https://api.openweathermap.org/data/2.5/forecast?id=3451190&APPID=d8d4c1a7797ac7b7982808bc8624119d&units=metric', true )  
+      xhr.send()
+      }
+	  
+	  
+	  
+      makeRequestHK();
+	  makeRequestLD();
+	  makeRequestNY();
+	  makeRequestSY()
+	  makeRequestCT()
+	  makeRequestRI()
+	  
+</script>
+<body>
+
+<h1>World Weather</h1>
+
+<div class="content">
+
+	<div class="top">
+
+		<div class="hk" id="hk" onmouseover="document.getElementById('hkb').style.width='90%'" onmouseout="document.getElementById('hkb').style.width='50%'" >
+			<h2>HONG KONG</h2>	
+		<div id ="hkmore"></div>
+		</div>
+		
+
+		<div class="ln" id="ld" onmouseover="document.getElementById('ldb').style.width='90%'" onmouseout="document.getElementById('ldb').style.width='50%'">
+			<h2>LONDON</h2>				
+		</div>
+
+		<div class="ny" id="ny" onmouseover="document.getElementById('nyb').style.width='90%'" onmouseout="document.getElementById('nyb').style.width='50%'">
+			<h2>NEW YORK CITY</h2>				
+		</div>
+		
+		<div class="clear"></div>
+
+	</div>
+
+	<div class="bottom">
+
+		<div class="sy" id="sy" onmouseover="document.getElementById('syb').style.width='90%'" onmouseout="document.getElementById('syb').style.width='50%'">
+			<h2>SYDNEY</h2>
+		</div>
+
+		<div class="ct" id="ct" onmouseover="document.getElementById('ctb').style.width='90%'" onmouseout="document.getElementById('ctb').style.width='50%'">
+			<h2>CAPE TOWN</h2>
+		</div>
+
+		<div class="rio" id="ri" onmouseover="document.getElementById('rib').style.width='90%'" onmouseout="document.getElementById('rib').style.width='50%'">
+			<h2>RIO de JANEIRO</h2>
+		</div>
+
+		<div class="clear"></div>
+		
+		<div class="butt">
+		<input type ="button" onclick="javascript:location.href='weather.html'" value="Back To Taiwan"></input>
+		<div>
+
+	</div>
+	<a href="及時世界天氣-00457036.pptx">說明簡報</a>
+	</div>
+
+ 
+
+</body>
+
+</html>
